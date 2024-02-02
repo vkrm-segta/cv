@@ -77,7 +77,7 @@ export default function Plans({ page }) {
         className={`${
           page === 'register'
             ? 'text-black px-0 mt-16'
-            : 'text-white px-5 lg:px-20 xl:px-40 mt-24'
+            : 'text-white px-5 lg:px-20 xl:px-40 mt-20'
         } w-full flex flex-col items-center justify-center py-10`}
       >
         {!page && (

@@ -62,11 +62,11 @@ export default function Faq() {
         height={2100}
         priority
       /> */}
-      <div className='relative w-full min-h-[91vh] text-white flex flex-col z-20 px-5 lg:px-20 xl:px-40 py-28 overflow-hidden'>
+      <div className='relative w-full min-h-[91vh] text-black flex flex-col z-20 px-5 lg:px-20 xl:px-40 py-28 overflow-hidden'>
         <h1
           data-aos='zoom-in-right'
           data-aos-duration='1000'
-          className='text-4xl lg:text-5xl xl:text-6xl text-center text-secondary font-bold'
+          className='text-4xl lg:text-5xl xl:text-6xl text-center text-secondary font-extrabold'
         >
           {t('faq&Privacy')}
         </h1>
@@ -82,11 +82,11 @@ export default function Faq() {
               <div
                 className={`${
                   selectedQuestion === index
-                    ? 'w-[92%] text-gray-300 border-[4px] border-primary mt-4'
-                    : 'w-[90%] text-white bg-primary mt-2'
+                    ? 'w-[92%] text-gray-700 border-[4px] border-primary mt-4'
+                    : 'w-[90%] text-black bg-gradient-to-r from-primary to-secondary mt-2'
                 } ${
                   i18n.language === 'he' ? 'flex-row-reverse' : 'flex-row'
-                } flex justify-between items-center lg:items-start cursor-pointer py-4 px-5 lg:px-10`}
+                } flex justify-between items-center lg:items-start rounded-2xl cursor-pointer py-4 px-5 lg:px-10`}
               >
                 <p
                   className={`${
@@ -109,7 +109,7 @@ export default function Faq() {
                 <div
                   className={`${
                     i18n.language === 'he' ? 'text-right' : 'text-left'
-                  } w-[95%] bg-[#F2F9F9] text-black text-base xl:text-lg leading-[1.2] transition-all opacity-100 py-4 px-5 lg:px-14 my-3 z-10`}
+                  } w-[95%] bg-primary rounded-2xl text-black text-base xl:text-lg leading-[1.2] transition-all opacity-100 py-4 px-5 lg:px-14 my-3 z-10`}
                 >
                   <p>{item.answer}</p>
                 </div>

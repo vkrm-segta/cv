@@ -45,7 +45,7 @@ export default function HeroSection() {
   }, [startIndex]);
 
   return (
-    <div className='relative w-full h-fit lg:min-h-[100vh] flex justify-center px-5 lg:px-20 xl:px-40 pt-[5.2rem] pb-10 overflow-hidden'>
+    <div className='relative w-full h-fit lg:min-h-[90vh] flex justify-center px-5 lg:px-20 xl:px-40 pt-[5.2rem] pb-0 overflow-hidden'>
       {/* <video
         className='absolute w-full h-full object-cover opacity-80'
         autoPlay

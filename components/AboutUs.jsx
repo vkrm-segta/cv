@@ -65,7 +65,7 @@ export default function AboutUs() {
         height={2100}
         priority
       />
-      <div className='relative w-full min-h-[91vh] text-white bg-[#F2F9F9] flex flex-col z-10 px-5 lg:px-20 xl:px-40 pt-[7rem] pb-20'>
+      <div className='relative w-full min-h-[91vh] text-black bg-[#F2F9F9] flex flex-col z-10 px-5 lg:px-20 xl:px-40 pt-[7rem] pb-20'>
         <h1
           data-aos='fade-up'
           className='text-4xl lg:text-5xl xl:text-6xl text-secondary text-center font-bold'
@@ -107,16 +107,16 @@ export default function AboutUs() {
                   i18n.language === 'he' ? 'text-right' : 'text-left'
                 } w-full my-2`}
               >
-                <h1 className='text-2xl xl:text-3xl font-medium text-secondary'>
+                <h1 className='text-2xl xl:text-3xl font-bold text-secondary'>
                   {person.name}
                 </h1>
-                <p className='text-white text-lg xl:text-xl'>{person.title}</p>
+                <p className='text-black text-lg xl:text-xl'>{person.title}</p>
               </div>
               <div className='mt-3'>
                 <p
                   className={`${
                     i18n.language === 'he' ? 'text-right' : 'text-left'
-                  } text-base xl:text-lg text-gray-300 leading-[1.3] mt-2`}
+                  } text-base xl:text-lg text-gray-700 leading-[1.3] mt-2`}
                 >
                   {getDescriptionToShow(person.desc, index)}
                   {person.desc.length < charactersToShow && (

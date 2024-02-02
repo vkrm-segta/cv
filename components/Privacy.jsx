@@ -19,27 +19,27 @@ export default function Privacy() {
         <div
           data-aos='zoom-in-right'
           data-aos-duration='1000'
-          className='transform transition duration-500 hover:!scale-105 cursor-pointer shadow-lg shadow-secondary w-full lg:w-1/2 border-4 border-primary p-5 mr-10'
+          className='w-full lg:w-1/2 rounded-2xl transform transition duration-500 hover:!scale-105 cursor-pointer shadow-lg shadow-secondary bg-gradient-to-tl from-primary to-[#0071AE] border-4 border-primary p-5 mr-10'
         >
-          <h1 className='text-xl xl:text-2xl font-semibold mb-3'>
+          <h1 className='text-xl xl:text-2xl font-bold mb-3'>
             {t('privacySection1')}
           </h1>
-          <p className='leading-[1.2] text-gray-300 text-base xl:text-lg'>
+          <p className='leading-[1.2] text-gray-700 text-base xl:text-lg'>
             {t('privacySection1Desc1')}
           </p>
-          <p className='leading-[1.2] text-gray-300 text-base xl:text-lg mt-2'>
+          <p className='leading-[1.2] text-gray-700 text-base xl:text-lg mt-2'>
             {t('privacySection1Desc2')}
           </p>
         </div>
         <div
           data-aos='zoom-in-left'
           data-aos-duration='1000'
-          className='transform transition duration-500 hover:!scale-105 cursor-pointer w-full lg:w-1/2 border-4 border-primary shadow-lg shadow-secondary p-5 mr-10 mt-8 lg:mt-0'
+          className='w-full lg:w-1/2 rounded-2xl transform transition duration-500 hover:!scale-105 cursor-pointer border-4 border-primary shadow-lg bg-gradient-to-tr from-primary to-[#0071AE] shadow-secondary p-5 mr-10 mt-8 lg:mt-0'
         >
-          <h1 className='text-xl xl:text-2xl font-semibold mb-3'>
+          <h1 className='text-xl xl:text-2xl font-bold mb-3'>
             {t('privacySection2')}
           </h1>
-          <p className='leading-[1.2] text-gray-300 text-base xl:text-lg'>
+          <p className='leading-[1.2] text-gray-700 text-base xl:text-lg'>
             {t('privacySection2Desc1')}
           </p>
         </div>
