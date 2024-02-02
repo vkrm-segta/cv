@@ -50,7 +50,7 @@ export default function Header() {
           : 'flex-col lg:flex-row'
       } ${
         openSidebar ? 'opacity-90 rounded-b-2xl' : 'opacity-90'
-      } z-30 fixed top-0 right-0 w-full flex justify-between items-center text-white bg-gradient-to-br from-primary to-tertiary shadow-md shadow-[#F2F9F9] py-1.5 px-5 lg:px-20 xl:px-40`}
+      } z-30 fixed top-0 right-0 w-full flex justify-between items-center text-white bg-gradient-to-br from-secondary to-tertiary shadow-md shadow-[#000] py-0.5 px-5 lg:px-20 xl:px-40`}
     >
       <div
         className={`${
@@ -107,7 +107,7 @@ export default function Header() {
           href='/register'
           className={`${
             i18n.language === 'he' ? 'mr-0 lg:mr-4 xl:mr-7' : 'mr-0'
-          } text-black text-base transition-all duration-500 hover:transition-all hover:duration-500 hover:scale-110 font-medium hover:ring-4 ring-2 ring-primary hover:ring-offset-0 hover:ring-[#fff] hover:ring-opacity-20 hover:shadow-md hover:shadow-[#fff] hover:bg-secondary bg-gradient-to-bl from-primary to-[#0071AE] rounded-full px-4 xl:px-7 py-3`}
+          } text-black text-base transition-all duration-500 hover:transition-all hover:duration-500 hover:scale-110 font-medium hover:ring-4 hover:ring-offset-0 hover:ring-[#fff] hover:ring-opacity-20 hover:shadow-md hover:shadow-[#fff] hover:bg-secondary bg-gradient-to-tl from-secondary to-[#a0fbfb] rounded-full px-4 xl:px-7 py-3`}
         >
           {t('signUp')}
         </Link>

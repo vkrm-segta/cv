@@ -54,14 +54,14 @@ export default function Faq() {
 
   return (
     <div id='faqSection' className='relative w-full'>
-      {/* <Image
+      <Image
         className='z-20 right-0 absolute w-[100vw] h-full object-fill opacity-100'
         src='/bg1.jpg'
         alt='Logo'
         width={2100}
         height={2100}
         priority
-      /> */}
+      />
       <div className='relative w-full min-h-[91vh] text-white flex flex-col z-20 px-5 lg:px-20 xl:px-40 py-28 overflow-hidden'>
         <h1
           data-aos='zoom-in-right'

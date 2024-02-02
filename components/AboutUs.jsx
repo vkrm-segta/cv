@@ -65,7 +65,7 @@ export default function AboutUs() {
         height={2100}
         priority
       />
-      <div className='relative w-full min-h-[91vh] text-white bg-[#F2F9F9] flex flex-col z-10 px-5 lg:px-20 xl:px-40 pt-[7rem] pb-20'>
+      <div className='relative w-full min-h-[91vh] text-white bg-primary flex flex-col z-10 px-5 lg:px-20 xl:px-40 pt-[7rem] pb-20'>
         <h1
           data-aos='fade-up'
           className='text-4xl lg:text-5xl xl:text-6xl text-secondary text-center font-bold'

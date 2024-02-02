@@ -63,7 +63,7 @@ export default function Plans({ page }) {
 
   return (
     <div id='planSection' className='relative'>
-      {/* {page !== 'register' && (
+      {page !== 'register' && (
         <Image
           className='z-0 right-0 absolute w-[100vw] h-full object-fill opacity-100'
           src='/bg.jpg'
@@ -72,7 +72,7 @@ export default function Plans({ page }) {
           height={2100}
           priority
         />
-      )} */}
+      )}
       <div
         className={`${
           page === 'register'
@@ -83,7 +83,7 @@ export default function Plans({ page }) {
         {!page && (
           <h1
             data-aos='fade-up'
-            className='z-20 text-center text-4xl lg:text-5xl xl:text-6xl text-secondary font-extrabold mb-20'
+            className='z-20 text-center text-4xl lg:text-5xl xl:text-6xl text-secondary font-bold mb-20'
           >
             {t('subPlans')}
           </h1>
@@ -107,11 +107,11 @@ export default function Plans({ page }) {
               <div
                 className={`${
                   hovered === index && page === 'register' && selected !== index
-                    ? 'transition-bg duration-300 pb-5'
-                    : 'text-black rounded-t-2xl'
+                    ? 'bg-secondary transition-bg duration-300 text-black border-4 border-primary pb-5'
+                    : 'bg-gradient-to-bl from-secondary via-tertiary to-primary text-white rounded-t-2xl'
                 } ${page === 'register' && 'pb-5 rounded-2xl'} ${
                   selected === index ? 'bg-[#0071aec2]' : ''
-                } flex flex-col items-center bg-gradient-to-bl from-secondary via-tertiary to-primary px-8 pt-5 pb-3`}
+                } flex flex-col items-center px-8 pt-5 pb-3`}
                 onClick={() => {
                   if (page === 'register') {
                     setSelected(index);
@@ -136,7 +136,7 @@ export default function Plans({ page }) {
                     page === 'register' &&
                     selected !== index
                       ? 'text-gray-600'
-                      : 'text-gray-700'
+                      : 'text-gray-200'
                   } text-center`}
                 >
                   {plan.plan}
@@ -146,11 +146,11 @@ export default function Plans({ page }) {
                 <div
                   className={`${
                     i18n.language === 'he' ? 'flex-col' : 'flex-col'
-                  } flex h-full rounded-b-3xl border-b-4 border-r-4 border-l-4 border-primary px-5`}
+                  } flex h-full rounded-b-2xl border-b-4 border-r-4 border-l-4 border-primary px-5`}
                 >
                   <div
                     className={`${
-                      page === 'register' ? 'text-black' : 'text-black'
+                      page === 'register' ? 'text-black' : 'text-white'
                     }`}
                   >
                     {plan.features.map((feature, i) => (
@@ -175,13 +175,13 @@ export default function Plans({ page }) {
                       </div>
                     ))}
                   </div>
-                  <div className='flex flex-col items-center text-black p-5 mt-auto'>
+                  <div className='flex flex-col items-center p-5 mt-auto'>
                     <p className='text-xl xl:text-2xl'>
                       {t('price')}: {plan.price}
                     </p>
                     <button
                       data-aos='zoom-in'
-                      className='w-full text-white transition-all duration-500 hover:transition-all hover:duration-500 hover:!scale-110 font-medium hover:ring-4 hover:ring-offset-0 hover:ring-[#fff] hover:ring-opacity-20 hover:shadow-md hover:shadow-[#fff] bg-gradient-to-bl from-primary to-[#0071AE] hover:text-white rounded-full mt-2 py-2'
+                      className='color-change-effect w-full text-black font-medium bg-secondary hover:text-white rounded-full mt-2 py-2'
                     >
                       {t('subscribe')}
                     </button>

@@ -18,7 +18,7 @@ export default async function Home({ params: { locale } }) {
       namespaces={i18nNamespaces}
       locale={locale}
       resources={resources}>
-      <main id='heroSection' className="relative flex min-h-screen flex-col items-center justify-between bg-[#F2F9F9] overflow-hidden">
+      <main id='heroSection' className="relative flex min-h-screen flex-col items-center justify-between bg-[#000] overflow-hidden">
         <Header />
         <HeroSection />
         <Plans />

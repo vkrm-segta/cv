@@ -12,7 +12,6 @@ import { IoMicOutline } from 'react-icons/io5';
 import { FaRegNoteSticky } from 'react-icons/fa6';
 import moment from 'moment';
 import { useTranslation } from 'next-i18next';
-import TypewriterText from './TypewriterText';
 
 export default function HeroSection() {
   const { t, i18n } = useTranslation();
@@ -46,7 +45,7 @@ export default function HeroSection() {
 
   return (
     <div className='relative w-full h-fit lg:min-h-[100vh] flex justify-center px-5 lg:px-20 xl:px-40 pt-[5.2rem] pb-10 overflow-hidden'>
-      {/* <video
+      <video
         className='absolute w-full h-full object-cover opacity-80'
         autoPlay
         loop
@@ -54,15 +53,7 @@ export default function HeroSection() {
       >
         <source src='/test3.mp4' type='video/mp4' />
         Your browser does not support the video tag.
-      </video> */}
-      {/* <Image
-        className='absolute w-full h-full object-cover opacity-90'
-        src='/phone-bg3.jpg'
-        alt='Logo'
-        width={2100}
-        height={2100}
-        priority
-      /> */}
+      </video>
       <div
         className={`${
           i18n.language === 'he'
@@ -71,13 +62,13 @@ export default function HeroSection() {
         } w-full flex pt-10`}
       >
         <div className='w-full lg:w-1/2 flex justify-center items-center py-10 lg:pr-10'>
-          <div className='z-10 text-black'>
+          <div className='z-10'>
             <h1
               className={`${
                 i18n.language === 'he'
                   ? 'text-center lg:text-right'
                   : 'text-center lg:text-left'
-              } text-4xl lg:text-5xl xl:text-[4.3rem] font-extrabold lg:leading-[1] text-left`}
+              } text-4xl lg:text-5xl xl:text-[4.3rem] font-bold lg:leading-[1] text-white text-left`}
             >
               {t('stepWithUs')}{' '}
               <p className='text-secondary cursor-pointer'>{t('cvCreation')}</p>
@@ -87,7 +78,7 @@ export default function HeroSection() {
                 i18n.language === 'he'
                   ? 'text-center lg:text-right'
                   : 'text-center lg:text-left'
-              } text-xl xl:text-2xl leading-[1.1] mt-5`}
+              } text-xl xl:text-2xl leading-[1.1] text-white mt-5`}
             >
               {t('experienceTheMagic')}
             </p>
@@ -95,8 +86,8 @@ export default function HeroSection() {
         </div>
         <div className='w-full lg:w-1/2 flex justify-center'>
           <div className='flex items-center z-10'>
-            <div className='w-[19.5rem] h-[40rem] flex flex-col justify-center items-center rounded-[2.7rem] shadow-inner shadow-secondary bg-gradient-to-b from-[#0071AE] via-secondary to-[#0071AE] overflow-hidden lg:mx-10'>
-              <div className='relative w-[18.2rem] h-[39rem] flex flex-col items-center justify-center rounded-[2.3rem] bg-[#f2f2f2] shadow-secondary my-2.5 overflow-hidden'>
+            <div className='w-[19.5rem] h-[40rem] flex flex-col justify-center items-center rounded-[2.7rem] shadow-inner shadow-secondary bg-gradient-to-b from-[#000] via-[#4d4d4d] to-[#000] overflow-hidden lg:mx-10'>
+              <div className='relative w-[18.2rem] h-[39rem] flex flex-col items-center justify-center rounded-[2.3rem] bg-[#fff] my-2.5 overflow-hidden'>
                 {/* <video
                   className='absolute w-full h-full object-cover'
                   autoPlay
@@ -121,7 +112,7 @@ export default function HeroSection() {
                     </div>
                     <div className='flex items-center w-20 h-5 rounded-full bg-black px-2'>
                       <Image
-                        className='object-cover w-3 h-3 ml-auto opacity-70'
+                        className='object-cover w-3 h-3 ml-auto opacity-40'
                         src='/camera.png'
                         alt='Logo'
                         width={2100}
@@ -136,7 +127,7 @@ export default function HeroSection() {
                   </div>
                   <div className='w-[95%] flex items-center justify-between mt-2'>
                     <div className='flex items-center'>
-                      <FaAngleLeft size={22} className='text-[#0071AE]' />
+                      <FaAngleLeft size={22} className='text-[#0a6da7]' />
                       <Image
                         className='object-cover w-6 h-6 ml-1 mr-3'
                         src='/logo.png'
@@ -150,26 +141,26 @@ export default function HeroSection() {
                     <div className='flex items-center'>
                       <PiVideoCamera
                         size={25}
-                        className='text-[#0071AE] mr-5'
+                        className='text-[#0a6da7] mr-5'
                       />
                       <BsTelephone
                         size={20}
-                        className='text-[#0071AE] mr-1.5'
+                        className='text-[#0a6da7] mr-1.5'
                       />
                     </div>
                   </div>
                 </div>
                 <div className='relative w-full flex items-center justify-center pb-2 mt-12'>
-                  {/* <Image
+                  <Image
                     className='absolute w-full h-full object-cover'
                     src='/phone-bg.jpg'
                     alt='Logo'
                     width={2100}
                     height={2100}
                     priority
-                  /> */}
+                  />
                   <div
-                    className='w-[16rem] h-[25rem] z-20 flex flex-col justify-center overflow-hidden mb-6'
+                    className='w-[16rem] h-[29rem] z-20 flex flex-col justify-center overflow-hidden'
                     ref={containerRef}
                     style={{ scrollBehavior: 'smooth' }}
                   >
@@ -181,13 +172,13 @@ export default function HeroSection() {
                       return (
                         <div
                           key={index}
-                          className={`w-[70%] rounded-lg shadow-md shadow-white text-black ${
+                          className={`w-[70%] rounded-lg shadow-inner shadow-white text-white ${
                             message.role === 'USER'
-                              ? 'bg-secondary to-tertiary'
-                              : 'bg-secondary to-tertiary ml-auto'
+                              ? 'bg-[#000000af]'
+                              : 'bg-[#000000af] ml-auto'
                           } px-5 py-2 mt-2`}
                         >
-                          <h1 className='text-sm text-gray-600'>
+                          <h1 className='text-sm text-gray-300'>
                             {message.role}
                           </h1>
                           <p className='leading-[1.25] mt-1'>{message.text}</p>
@@ -199,21 +190,21 @@ export default function HeroSection() {
                 <div className='w-[95%] flex items-center justify-between mt-1'>
                   <div className='w-full flex items-center'>
                     <div>
-                      <BsPlus size={30} className='text-[#0071AE] mr-1' />
+                      <BsPlus size={30} className='text-[#0a6da7] mr-1' />
                     </div>
                     <div className='w-[80%] shadow-md border rounded-full bg-white px-2.5 py-1'>
                       <FaRegNoteSticky
                         size={20}
-                        className='text-[#0071AE] ml-auto'
+                        className='text-[#0a6da7] ml-auto'
                       />
                     </div>
                   </div>
                   <div className='flex items-center'>
                     <HiOutlineCamera
                       size={25}
-                      className='text-[#0071AE] mr-2'
+                      className='text-[#0a6da7] mr-2'
                     />
-                    <IoMicOutline size={20} className='text-[#0071AE] mr-1.5' />
+                    <IoMicOutline size={20} className='text-[#0a6da7] mr-1.5' />
                   </div>
                 </div>
               </div>

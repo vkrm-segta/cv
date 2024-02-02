@@ -30,16 +30,16 @@ export default function HowItWorks() {
 
   return (
     <div id='howItWorks' className='relative'>
-      {/* <Image
+      <Image
         className='z-10 right-0 absolute w-[100vw] h-full object-fill opacity-100'
         src='/bg2.jpg'
         alt='Logo'
         width={2100}
         height={2100}
         priority
-      /> */}
+      />
       <div className='z-20 relative w-full min-h-[91vh] text-black flex flex-col pt-[5.2rem] pb-2'>
-        <div className='absolute top-0 w-full h-[50%] lg:h-[70%] bg-[#F2F9F9]' />
+        <div className='absolute top-0 w-full h-[50%] lg:h-[70%] bg-[#21FAFB bg-gradient-to-b from-primary to-tertiary' />
         <div className='z-10 px-5 lg:px-20 xl:px-40 pt-10'>
           <div data-aos='fade-up' className='text-center text-white z-10'>
             <h1 className='text-4xl lg:text-5xl xl:text-6xl text-secondary font-bold'>
