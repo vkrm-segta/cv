@@ -49,8 +49,8 @@ export default function Header() {
           ? 'flex-col lg:flex-row-reverse'
           : 'flex-col lg:flex-row'
       } ${
-        openSidebar ? 'opacity-90 rounded-b-2xl' : 'opacity-90'
-      } z-30 fixed top-0 right-0 w-full flex justify-between items-center text-white bg-gradient-to-br from-primary to-tertiary shadow-md shadow-[#F2F9F9] py-1.5 px-5 lg:px-20 xl:px-40`}
+        openSidebar ? 'rounded-b-2xl' : ''
+      } z-30 backdrop-blur-md backdrop-brightness-150 bg-tertiary/80 h-[5.2rem] fixed top-0 right-0 w-full flex justify-between items-center text-white py-1.5 px-5 lg:px-20 xl:px-40`}
     >
       <div
         className={`${
@@ -59,7 +59,7 @@ export default function Header() {
             : 'flex-row lg:flex-col'
         } w-full lg:w-fit flex items-center justify-between lg:justify-start`}
       >
-        <button className='py-1' onClick={() => scrollToSection('heroSection')}>
+        <button className='' onClick={() => scrollToSection('heroSection')}>
           <Image
             className='object-cover w-16 h-16'
             src='/logo.png'
@@ -92,13 +92,13 @@ export default function Header() {
             className={`${
               item.route === pathName
                 ? 'border-b-2 border-[#dedede] text-[#dedede] hover:pb-0'
-                : 'text-black hover:pb-1'
+                : 'text-white hover:pb-1'
             } ${
               openSidebar ? 'py-1' : 'py-0'
-            } relative overflow-hidden hover:text-[#474747] focus:outline-none group mr-0 lg:mr-5 xl:mr-10`}
+            } relative overflow-hidden hover:text-secondary focus:outline-none group mr-0 lg:mr-5 xl:mr-10`}
           >
             {item.route !== pathName && (
-              <span className='absolute inset-0 border-b-2 border-[#474747] w-0 transition-all origin-center group-hover:w-full'></span>
+              <span className='absolute inset-0 border-b-2 border-secondary w-0 transition-all origin-center group-hover:w-full'></span>
             )}
             {item.name}
           </button>
@@ -107,7 +107,7 @@ export default function Header() {
           href='/register'
           className={`${
             i18n.language === 'he' ? 'mr-0 lg:mr-4 xl:mr-7' : 'mr-0'
-          } text-black text-base transition-all duration-500 hover:transition-all hover:duration-500 hover:scale-110 font-medium hover:ring-4 ring-2 ring-primary hover:ring-offset-0 hover:ring-[#fff] hover:ring-opacity-20 hover:shadow-md hover:shadow-[#fff] hover:bg-secondary bg-gradient-to-bl from-primary to-[#0071AE] rounded-full px-4 xl:px-7 py-3`}
+          } text-white text-base transition-all duration-500 hover:transition-all hover:duration-500 hover:scale-110 font-medium hover:ring-4 ring-2 ring-secondary hover:ring-offset-0 hover:ring-[#fff] hover:ring-opacity-20 hover:shadow-md hover:shadow-[#fff] hover:bg-secondary bg-gradient-to-bl from-secondary to-primary rounded-full px-4 xl:px-7 py-3`}
         >
           {t('signUp')}
         </Link>

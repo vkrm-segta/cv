@@ -17,7 +17,7 @@ export default function Plans({ page }) {
       name: 'Michal',
       plan: t('plan1'),
       price: '$100',
-      image: '/user1.jpg',
+      image: '/user1.png',
       features: [
         t('plan1Feature1'),
         t('plan1Feature2'),
@@ -31,7 +31,7 @@ export default function Plans({ page }) {
       name: 'Tom',
       plan: t('plan2'),
       price: '$300',
-      image: '/user2.jpg',
+      image: '/user2.png',
       features: [
         t('plan2Feature1'),
         t('plan2Feature2'),
@@ -45,7 +45,7 @@ export default function Plans({ page }) {
       name: 'Ben',
       plan: t('plan3'),
       price: '$500',
-      image: '/user3.jpg',
+      image: '/user3.png',
       features: [
         t('plan3Feature1'),
         t('plan3Feature2'),
@@ -62,11 +62,11 @@ export default function Plans({ page }) {
   }, []);
 
   return (
-    <div id='planSection' className='relative'>
+    <div id='planSection' className='relative bg-transparent'>
       {/* {page !== 'register' && (
         <Image
-          className='z-0 right-0 absolute w-[100vw] h-full object-fill opacity-100'
-          src='/bg.jpg'
+          className='z-0 right-0 absolute w-[100vw] h-[100vh] bg-repeat object-fill'
+          src='/bg4.jpg'
           alt='Logo'
           width={2100}
           height={2100}
@@ -77,8 +77,8 @@ export default function Plans({ page }) {
         className={`${
           page === 'register'
             ? 'text-black px-0 mt-16'
-            : 'text-white px-5 lg:px-20 xl:px-40 mt-20'
-        } w-full flex flex-col items-center justify-center py-10`}
+            : 'text-white px-5 lg:px-20 xl:px-40 pt-40'
+        } w-full flex flex-col items-center justify-center bg-black py-10`}
       >
         {!page && (
           <h1
@@ -108,7 +108,7 @@ export default function Plans({ page }) {
                 className={`${
                   hovered === index && page === 'register' && selected !== index
                     ? 'transition-bg duration-300 pb-5'
-                    : 'text-black rounded-t-2xl'
+                    : 'text-white rounded-t-2xl'
                 } ${page === 'register' && 'pb-5 rounded-2xl'} ${
                   selected === index ? 'bg-[#0071aec2]' : ''
                 } flex flex-col items-center bg-gradient-to-bl from-secondary via-tertiary to-primary px-8 pt-5 pb-3`}
@@ -122,7 +122,7 @@ export default function Plans({ page }) {
                   {plan.title}
                 </h1>
                 <Image
-                  className='relative w-24 h-24 object-cover rounded-full my-3'
+                  className='relative w-24 h-24 object-cover bg-primary rounded-full my-3'
                   src={plan.image}
                   alt='Logo'
                   width={2100}
@@ -135,8 +135,8 @@ export default function Plans({ page }) {
                     hovered === index &&
                     page === 'register' &&
                     selected !== index
-                      ? 'text-gray-600'
-                      : 'text-gray-700'
+                      ? 'text-gray-300'
+                      : 'text-gray-300'
                   } text-center`}
                 >
                   {plan.plan}
@@ -148,11 +148,7 @@ export default function Plans({ page }) {
                     i18n.language === 'he' ? 'flex-col' : 'flex-col'
                   } flex h-full rounded-b-3xl border-b-4 border-r-4 border-l-4 border-primary px-5`}
                 >
-                  <div
-                    className={`${
-                      page === 'register' ? 'text-black' : 'text-black'
-                    }`}
-                  >
+                  <div className='text-white'>
                     {plan.features.map((feature, i) => (
                       <div
                         key={i}
@@ -175,13 +171,13 @@ export default function Plans({ page }) {
                       </div>
                     ))}
                   </div>
-                  <div className='flex flex-col items-center text-black p-5 mt-auto'>
+                  <div className='flex flex-col items-center text-white p-5 mt-auto'>
                     <p className='text-xl xl:text-2xl'>
                       {t('price')}: {plan.price}
                     </p>
                     <button
                       data-aos='zoom-in'
-                      className='w-full text-white transition-all duration-500 hover:transition-all hover:duration-500 hover:!scale-110 font-medium hover:ring-4 hover:ring-offset-0 hover:ring-[#fff] hover:ring-opacity-20 hover:shadow-md hover:shadow-[#fff] bg-gradient-to-bl from-primary to-[#0071AE] hover:text-white rounded-full mt-2 py-2'
+                      className='w-full text-white transition-all duration-500 hover:transition-all hover:duration-500 hover:!scale-110 font-medium hover:ring-4 hover:ring-offset-0 hover:ring-[#fff] hover:ring-opacity-20 hover:shadow-md hover:shadow-[#fff] bg-gradient-to-bl from-secondary to-primary hover:text-white rounded-full mt-2 py-2'
                     >
                       {t('subscribe')}
                     </button>

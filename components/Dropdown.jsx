@@ -75,7 +75,7 @@ const Dropdown = () => {
         type='button'
         className={`${
           i18n.language === 'he' ? 'mr-0 lg:mr-4 xl:mr-7' : 'ml-0 lg:ml-4 xl:ml-7'
-        } inline-flex items-center text-base text-black py-2 mb-3 lg:mb-0`}
+        } inline-flex items-center text-base text-white py-2 mb-3 lg:mb-0`}
         onClick={toggleDropdown}
       >
         <TbWorld className='text-base' />

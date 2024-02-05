@@ -62,7 +62,7 @@ export default function Faq() {
         height={2100}
         priority
       /> */}
-      <div className='relative w-full min-h-[91vh] text-black flex flex-col z-20 px-5 lg:px-20 xl:px-40 py-28 overflow-hidden'>
+      <div className='relative w-full min-h-[91vh] bg-black text-white flex flex-col z-20 px-5 lg:px-20 xl:px-40 py-28 overflow-hidden'>
         <h1
           data-aos='zoom-in-right'
           data-aos-duration='1000'
@@ -75,18 +75,18 @@ export default function Faq() {
           {questionAnswer.map((item, index) => (
             <div
               key={index}
-              className='relative flex flex-col items-center'
+              className='relative flex flex-col items-center transition-all duration-500'
               onMouseEnter={() => setSelectQuestion(index)}
               onMouseLeave={() => setSelectQuestion(null)}
             >
               <div
                 className={`${
                   selectedQuestion === index
-                    ? 'w-[92%] text-gray-700 border-[4px] border-primary mt-4'
-                    : 'w-[90%] text-black bg-gradient-to-r from-primary to-secondary mt-2'
+                    ? 'w-[92%] text-gray-300 border-[4px] border-tertiary mt-4'
+                    : 'w-[90%] text-white bg-gradient-to-r from-primary to-secondary mt-2'
                 } ${
                   i18n.language === 'he' ? 'flex-row-reverse' : 'flex-row'
-                } flex justify-between items-center lg:items-start rounded-2xl cursor-pointer py-4 px-5 lg:px-10`}
+                } flex justify-between items-center lg:items-start transition-all duration-300 rounded-2xl cursor-pointer py-4 px-5 lg:px-10`}
               >
                 <p
                   className={`${
@@ -109,7 +109,7 @@ export default function Faq() {
                 <div
                   className={`${
                     i18n.language === 'he' ? 'text-right' : 'text-left'
-                  } w-[95%] bg-primary rounded-2xl text-black text-base xl:text-lg leading-[1.2] transition-all opacity-100 py-4 px-5 lg:px-14 my-3 z-10`}
+                  } w-[95%] bg-tertiary rounded-2xl text-white text-base xl:text-lg leading-[1.2] transition-all duration-300 opacity-100 py-4 px-5 lg:px-14 my-3 z-10`}
                 >
                   <p>{item.answer}</p>
                 </div>

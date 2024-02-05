@@ -7,6 +7,7 @@ import Plans from "@/components/Plans";
 import Faq from "@/components/Faq";
 import initTranslations from "../i18n";
 import TranslationsProvider from '@/components/TranslationsProvider';
+import Image from "next/image";
 
 const i18nNamespaces = ['common'];
 

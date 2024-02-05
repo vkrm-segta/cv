@@ -19,7 +19,7 @@ export default function Privacy() {
         <div
           data-aos='zoom-in-right'
           data-aos-duration='1000'
-          className='w-full lg:w-1/2 rounded-2xl transform transition duration-500 hover:!scale-105 cursor-pointer shadow-lg shadow-secondary bg-gradient-to-tl from-primary to-[#0071AE] border-4 border-primary p-5 mr-10'
+          className='w-full lg:w-1/2 rounded-2xl transform transition duration-500 hover:!scale-105 cursor-pointer shadow-lg shadow-secondary bg-gradient-to-tl from-secondary to-primary border- border-secondary p-5 mr-10'
         >
           <h1 className='text-xl xl:text-2xl font-bold mb-3'>
             {t('privacySection1')}
@@ -34,7 +34,7 @@ export default function Privacy() {
         <div
           data-aos='zoom-in-left'
           data-aos-duration='1000'
-          className='w-full lg:w-1/2 rounded-2xl transform transition duration-500 hover:!scale-105 cursor-pointer border-4 border-primary shadow-lg bg-gradient-to-tr from-primary to-[#0071AE] shadow-secondary p-5 mr-10 mt-8 lg:mt-0'
+          className='w-full lg:w-1/2 rounded-2xl transform transition duration-500 hover:!scale-105 cursor-pointer shadow-lg shadow-secondary bg-gradient-to-tr from-secondary to-primary border- border-secondary p-5 mr-10 mt-8 lg:mt-0'
         >
           <h1 className='text-xl xl:text-2xl font-bold mb-3'>
             {t('privacySection2')}
