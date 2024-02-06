@@ -50,8 +50,6 @@ export default function HowItWorks() {
             </p>
           </div>
           <div
-            data-aos='zoom-out-up'
-            data-aos-duration='1000'
             className={`${
               i18n.language === 'he'
                 ? 'flex-col lg:flex-row-reverse'
@@ -60,7 +58,11 @@ export default function HowItWorks() {
           >
             {data.map((item, index) => (
               <div key={index} className='flex items-center w-full lg:w-[23%]'>
-                <div className='relative w-full lg:w-[95%] flex justify-center items-center shadow-md rounded-full border-4 hover:border-0 border-secondary p-0 hover:p-0 hover:scale-105 transition-all duration-500 bg-secondary mb-20 lg:mb-0 overflow-hidden'>
+                <div
+                  data-aos='zoom-in-left'
+                  data-aos-duration={`${index}000`}
+                  className='relative w-full lg:w-[95%] flex justify-center items-center shadow-md rounded-full border-4 hover:border-4 border-secondary p-0 hover:p-0 hover:!scale-105 transition-all duration-500 bg-secondary mb-20 lg:mb-0 overflow-hidden'
+                >
                   <Image
                     className='relative w-full h-full object-cover rounded-full'
                     src={item.logo}

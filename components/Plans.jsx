@@ -102,7 +102,7 @@ export default function Plans({ page }) {
               onMouseEnter={() => setHovered(index)}
               onMouseLeave={() => setHovered(null)}
               data-aos='zoom-in-left'
-              data-aos-duration='1000'
+              data-aos-duration={`${index + 1}000`}
             >
               <div
                 className={`${
@@ -175,10 +175,7 @@ export default function Plans({ page }) {
                     <p className='text-xl xl:text-2xl'>
                       {t('price')}: {plan.price}
                     </p>
-                    <button
-                      data-aos='zoom-in'
-                      className='w-full text-white transition-all duration-500 hover:transition-all hover:duration-500 hover:!scale-110 font-medium hover:ring-4 hover:ring-offset-0 hover:ring-[#fff] hover:ring-opacity-20 hover:shadow-md hover:shadow-[#fff] bg-gradient-to-bl from-secondary to-primary hover:text-white rounded-full mt-2 py-2'
-                    >
+                    <button className='w-full text-white transition-all duration-500 hover:transition-all hover:duration-500 hover:!scale-110 font-medium hover:ring-4 hover:ring-offset-0 hover:ring-[#fff] hover:ring-opacity-20 hover:shadow-md hover:shadow-[#fff] bg-gradient-to-bl from-secondary to-primary hover:text-white rounded-full mt-2 py-2'>
                       {t('subscribe')}
                     </button>
                   </div>

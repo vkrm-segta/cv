@@ -17,7 +17,7 @@ export default function Privacy() {
         } w-full flex text-white mt-8`}
       >
         <div
-          data-aos='zoom-in-right'
+          data-aos='zoom-in-left'
           data-aos-duration='1000'
           className='w-full lg:w-1/2 rounded-2xl transform transition duration-500 hover:!scale-105 cursor-pointer shadow-lg shadow-secondary bg-gradient-to-tl from-secondary to-primary border- border-secondary p-5 mr-10'
         >
@@ -33,7 +33,7 @@ export default function Privacy() {
         </div>
         <div
           data-aos='zoom-in-left'
-          data-aos-duration='1000'
+          data-aos-duration='2000'
           className='w-full lg:w-1/2 rounded-2xl transform transition duration-500 hover:!scale-105 cursor-pointer shadow-lg shadow-secondary bg-gradient-to-tr from-secondary to-primary border- border-secondary p-5 mr-10 mt-8 lg:mt-0'
         >
           <h1 className='text-xl xl:text-2xl font-bold mb-3'>

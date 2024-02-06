@@ -45,7 +45,7 @@ export default function HeroSection() {
   }, [startIndex]);
 
   return (
-    <div className='relative w-full h-fit lg:min-h-[98vh] flex justify-center border-b-4 border-secondary px-5 lg:px-20 xl:px-40 pt-[5.2rem] pb-0 overflow-hidden'>
+    <main className='relative w-full h-fit lg:min-h-[98vh] flex justify-center border-b-4 border-secondary px-5 lg:px-20 xl:px-40 pt-[5.2rem] pb-0 overflow-hidden'>
       <video
         className='absolute w-full h-full object-cover opacity-80'
         autoPlay
@@ -70,7 +70,7 @@ export default function HeroSection() {
             : 'flex-col lg:flex-row'
         } w-full flex`}
       >
-        <div className='w-full lg:w-1/2 flex justify-center items-center py-10 lg:pr-10'>
+        <section className='w-full lg:w-1/2 flex justify-center items-center py-10 lg:pr-10'>
           <div className='z-10 text-white'>
             <h1
               className={`${
@@ -92,8 +92,8 @@ export default function HeroSection() {
               {t('experienceTheMagic')}
             </p>
           </div>
-        </div>
-        <div className='w-full lg:w-1/2 flex justify-center'>
+        </section>
+        <section className='w-full lg:w-1/2 flex justify-center'>
           <div className='flex items-center z-10'>
             <div className='w-[19.5rem] h-[40rem] flex flex-col justify-center items-center rounded-[2.7rem] shadow-inner shadow-secondary bg-gradient-to-b from-[#0071AE] via-secondary to-[#0071AE] overflow-hidden lg:mx-10'>
               <div className='relative w-[18.2rem] h-[39rem] flex flex-col items-center justify-center rounded-[2.3rem] bg-[#000000b8] shadow-inner sha shadow-secondary my-2.5 overflow-hidden'>
@@ -219,8 +219,8 @@ export default function HeroSection() {
               </div>
             </div>
           </div>
-        </div>
+        </section>
       </div>
-    </div>
+    </main>
   );
 }

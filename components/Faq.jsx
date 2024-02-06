@@ -64,20 +64,28 @@ export default function Faq() {
       /> */}
       <div className='relative w-full min-h-[91vh] bg-black text-white flex flex-col z-20 px-5 lg:px-20 xl:px-40 py-28 overflow-hidden'>
         <h1
-          data-aos='zoom-in-right'
-          data-aos-duration='1000'
+          data-aos='fade-up'
           className='text-4xl lg:text-5xl xl:text-6xl text-center text-secondary font-extrabold'
         >
           {t('faq&Privacy')}
         </h1>
         <Privacy />
-        <div data-aos='zoom-in-down' data-aos-duration='1000' className='my-16'>
+        <div className='my-16'>
           {questionAnswer.map((item, index) => (
             <div
               key={index}
-              className='relative flex flex-col items-center transition-all duration-500'
-              onMouseEnter={() => setSelectQuestion(index)}
-              onMouseLeave={() => setSelectQuestion(null)}
+              data-aos='zoom-in-left'
+              data-aos-duration='500'
+              className='relative flex flex-col items-center !transition-all !duration-500'
+              // onMouseEnter={() => setSelectQuestion(index)}
+              // onMouseLeave={() => setSelectQuestion(null)}
+              onClick={() => {
+                if (selectedQuestion === index) {
+                  setSelectQuestion(null);
+                } else {
+                  setSelectQuestion(index);
+                }
+              }}
             >
               <div
                 className={`${

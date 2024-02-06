@@ -84,12 +84,16 @@ export default function AboutUs() {
             {t('aboutUsDesc2')}
           </p>
         </div>
-        <div className='w-[80vw] flex items-center relative mt-20'>
+        <div
+          data-aos='zoom-in-left'
+          data-aos-duration='1000'
+          className='w-[80vw] flex items-center relative mt-20'
+        >
           <button
             onClick={scrollToPrevious}
             className={`${
               selectedIndex === 1
-                ? 'hover:shadow-none bg-white text-black'
+                ? 'hover:shadow-none bg-[#dedede] text-black'
                 : 'hover:shadow-md hover:shadow-secondary hover:text-2xl hover:scale-105 transition-all duration-300 text-white bg-primary'
             } absolute z-10 -left-8 w-16 h-16 flex items-center justify-center text-xl rounded-full hover:shadow-md hover:shadow-secondary bg-primary`}
             disabled={selectedIndex === 1}
@@ -98,12 +102,12 @@ export default function AboutUs() {
           </button>
           <div
             ref={containerRef}
-            className='w-full flex items-center overflow-hidden'
+            className='w-full flex items-center overflow-hidden transition-transform duration-300 ease-in-out'
           >
             {team.map((person, index) => (
               <div
                 key={index}
-                className='w-full h-fit flex justify-center rounded-2xl bg-gradient-to-tl from-secondary to-primary text-white'
+                className='w-full h-fit flex justify-center rounded-2xl bg-gradient-to-tl from-secondary to-primary text-white transition-opacity duration-300'
               >
                 <div className='w-[25vw] flex items-center justify-end pt-16 pb-10 px-5'>
                   <div className='relative flex w-[15rem] h-[17rem] backdrop-blur-md rounded-t-2xl shadow-md shadow-secondary bg-secondary mt-10 pb-2'>
@@ -131,7 +135,7 @@ export default function AboutUs() {
             onClick={scrollToNext}
             className={`${
               selectedIndex >= team.length
-                ? 'hover:shadow-none bg-white text-black'
+                ? 'hover:shadow-none bg-[#dedede] text-black'
                 : 'hover:shadow-md hover:shadow-secondary hover:text-2xl hover:scale-105 transition-all duration-300 text-white bg-primary'
             } absolute z-10 -right-8 w-16 h-16 flex items-center justify-center text-xl rounded-full hover:shadow-md hover:shadow-secondary bg-primary`}
             disabled={selectedIndex >= team.length}
